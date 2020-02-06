@@ -59,6 +59,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = UITableViewCell()
         let album = albums[indexPath.row]
         cell.textLabel?.text = "Album id = \(album.albumId)  \(album.firstPhotoId) - \(album.lastPhotoId)"

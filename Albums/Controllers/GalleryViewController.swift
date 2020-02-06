@@ -35,9 +35,10 @@ extension GalleryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "GalleryTableViewCell", for: indexPath) as? GalleryTableViewCell else { return UITableViewCell() }
-        
+         
         let photo = album.photos[indexPath.row]
         guard let imageURL = URL(string: photo.thumbUrl!) else { return cell }
+        cell.photoImageView.image = nil
         cell.photoImageView.load(url: imageURL)
         
         return cell
@@ -50,7 +51,6 @@ extension GalleryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? GalleryTableViewCell {
             let photo = album.photos[indexPath.row]
-                      let image = cell.photoImageView.image
                       performSegue(withIdentifier: "toPhotoVCSegue", sender: photo)
         }
     }
