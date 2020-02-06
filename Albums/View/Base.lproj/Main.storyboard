@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dP-Hr-CGS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dP-Hr-CGS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -129,8 +129,8 @@
                                     <constraint firstAttribute="height" constant="379" id="IhX-Bx-WwK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-Tt-12a">
-                                <rect key="frame" x="20" y="104" width="374" height="3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-Tt-12a">
+                                <rect key="frame" x="20" y="565" width="374" height="80"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -138,21 +138,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="tEH-Tt-12a" firstAttribute="top" secondItem="hu5-QD-pVV" secondAttribute="bottom" constant="71" id="7yg-MV-bZc"/>
+                            <constraint firstItem="8Z1-Z9-XNi" firstAttribute="trailing" secondItem="tEH-Tt-12a" secondAttribute="trailing" constant="20" id="ATm-az-tk4"/>
+                            <constraint firstItem="tEH-Tt-12a" firstAttribute="leading" secondItem="8Z1-Z9-XNi" secondAttribute="leading" constant="20" id="AX0-qO-yZY"/>
                             <constraint firstItem="8Z1-Z9-XNi" firstAttribute="bottom" secondItem="hu5-QD-pVV" secondAttribute="bottom" constant="368" id="Fd4-YI-e9n"/>
-                            <constraint firstItem="8Z1-Z9-XNi" firstAttribute="trailing" secondItem="tEH-Tt-12a" secondAttribute="trailing" constant="20" id="FyO-aL-i6E"/>
-                            <constraint firstItem="hu5-QD-pVV" firstAttribute="top" secondItem="tEH-Tt-12a" secondAttribute="bottom" constant="8" id="Hcf-UJ-4ek"/>
+                            <constraint firstItem="8Z1-Z9-XNi" firstAttribute="bottom" secondItem="tEH-Tt-12a" secondAttribute="bottom" constant="217" id="H47-DX-dN3"/>
                             <constraint firstItem="8Z1-Z9-XNi" firstAttribute="trailing" secondItem="hu5-QD-pVV" secondAttribute="trailing" constant="20" id="Tug-fN-DL9"/>
-                            <constraint firstItem="tEH-Tt-12a" firstAttribute="top" secondItem="8Z1-Z9-XNi" secondAttribute="top" constant="16" id="a7e-Wp-DEy"/>
                             <constraint firstItem="hu5-QD-pVV" firstAttribute="leading" secondItem="8Z1-Z9-XNi" secondAttribute="leading" constant="20" id="jTY-wq-7kD"/>
-                            <constraint firstItem="tEH-Tt-12a" firstAttribute="width" secondItem="hu5-QD-pVV" secondAttribute="width" id="nZS-Iv-Cfu"/>
                             <constraint firstItem="hu5-QD-pVV" firstAttribute="centerX" secondItem="8Z1-Z9-XNi" secondAttribute="centerX" id="ueH-ea-i0N"/>
-                            <constraint firstItem="tEH-Tt-12a" firstAttribute="leading" secondItem="8Z1-Z9-XNi" secondAttribute="leading" constant="20" id="zrg-Ia-mDM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Z1-Z9-XNi"/>
                     </view>
                     <navigationItem key="navigationItem" id="dag-ID-zM7"/>
                     <connections>
                         <outlet property="photoImageView" destination="hu5-QD-pVV" id="NEw-nJ-8dT"/>
+                        <outlet property="titleLabel" destination="tEH-Tt-12a" id="pYA-c0-qnW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAC-vx-wF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

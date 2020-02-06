@@ -9,11 +9,16 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    
     var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoImageView.image = image
+            guard let imageURL = URL(string: photo.url!) else { return  }
+            photoImageView.load(url: imageURL)
+            titleLabel.text = photo.title
+        
     }
 }

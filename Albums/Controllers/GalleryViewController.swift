@@ -19,8 +19,9 @@ class GalleryViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let vc = segue.destination as? PhotoViewController,
-                let image = sender as? UIImage {
-                vc.image = image
+                  let photo = sender as? Photo {
+                  vc.photo = photo
+                            
         }
     }
 }
@@ -48,8 +49,9 @@ extension GalleryViewController: UITableViewDataSource {
 extension GalleryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? GalleryTableViewCell {
-            let image = cell.photoImageView.image
-            performSegue(withIdentifier: "toPhotoVCSegue", sender: image)
+            let photo = album.photos[indexPath.row]
+                      let image = cell.photoImageView.image
+                      performSegue(withIdentifier: "toPhotoVCSegue", sender: photo)
         }
     }
 }
