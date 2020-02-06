@@ -12,6 +12,7 @@ class PhotoViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    var photo: Photo!
     var image: UIImage!
     
     override func viewDidLoad() {

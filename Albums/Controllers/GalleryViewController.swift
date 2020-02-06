@@ -12,7 +12,7 @@ import SDWebImage
 class GalleryViewController: UIViewController {
     @IBOutlet weak var galleryTable: UITableView!
     var album: Album!
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
     }
